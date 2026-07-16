@@ -1,6 +1,6 @@
 {
   "name": "soma-style",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Shared design tokens for the soma ecosystem — macro colors, chart palette, and a Tailwind v4 theme, reused across soma and the standalone macro-engine / hevy2garmin / garmin-auth UIs.",
   "license": "MIT",
   "author": "drkostas",
