@@ -1,0 +1,48 @@
+/**
+ * soma-style shadcn compatibility layer.
+ *
+ * Maps the shadcn/ui token names (background, card, primary, muted-foreground,
+ * chart-1..5, sidebar-*) onto the canonical soma-style palette from base.css, so
+ * a shadcn-based app (like soma) renders in the shared blue-slate theme without
+ * rewriting its components. Import after base.css:
+ *   @import "soma-style/base.css";
+ *   @import "soma-style/shadcn-compat.css";
+ */
+@theme inline {
+  --color-background: var(--color-base);
+  --color-foreground: var(--color-text);
+
+  --color-card: var(--color-surface);
+  --color-card-foreground: var(--color-text);
+  --color-popover: var(--color-surface-elevated);
+  --color-popover-foreground: var(--color-text);
+
+  --color-primary: var(--color-teal);
+  --color-primary-foreground: var(--color-base);
+  --color-secondary: var(--color-surface-elevated);
+  --color-secondary-foreground: var(--color-text);
+  --color-muted: var(--color-surface-elevated);
+  --color-muted-foreground: var(--color-text-muted);
+  --color-accent: var(--color-surface-hover);
+  --color-accent-foreground: var(--color-text);
+  --color-destructive: var(--color-danger);
+
+  --color-border: var(--color-border);
+  --color-input: var(--color-border);
+  --color-ring: var(--color-teal-dim);
+
+  --color-chart-1: var(--color-teal);
+  --color-chart-2: var(--color-lime);
+  --color-chart-3: var(--color-warm);
+  --color-chart-4: var(--color-indigo);
+  --color-chart-5: var(--color-teal-light);
+
+  --color-sidebar: var(--color-surface);
+  --color-sidebar-foreground: var(--color-text);
+  --color-sidebar-primary: var(--color-teal);
+  --color-sidebar-primary-foreground: var(--color-base);
+  --color-sidebar-accent: var(--color-surface-hover);
+  --color-sidebar-accent-foreground: var(--color-text);
+  --color-sidebar-border: var(--color-border);
+  --color-sidebar-ring: var(--color-teal-dim);
+}
