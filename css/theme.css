@@ -1,0 +1,29 @@
+/**
+ * soma-style — Tailwind v4 theme.
+ *
+ * Import in your app's global stylesheet AFTER `@import "tailwindcss";`
+ *   @import "soma-style/theme.css";
+ *
+ * Registers the macro + status color tokens so utility classes resolve to the
+ * design-spec palette:
+ *   protein → bg-warm / text-warm       (#B17850)
+ *   carbs   → bg-indigo / text-indigo   (#6366B0)
+ *   fat     → bg-lime / text-lime       (#CBE896)
+ *   calories→ bg-teal / text-teal       (#77C8D1)
+ *   fiber   → bg-teal-light             (#82D0C8)
+ * These are bare color tokens; they coexist with Tailwind's numbered scales
+ * (e.g. `indigo-500` is unaffected).
+ */
+@theme {
+  /* Macro palette (warm/cool design spec) */
+  --color-teal: #77c8d1; /* calories */
+  --color-warm: #b17850; /* protein */
+  --color-indigo: #6366b0; /* carbs */
+  --color-lime: #cbe896; /* fat */
+  --color-teal-light: #82d0c8; /* fiber */
+
+  /* Status colors (used by progressColor / deficitColor) */
+  --color-success: oklch(62% 0.17 142);
+  --color-warning: oklch(80% 0.18 87);
+  --color-danger: oklch(60% 0.22 25);
+}

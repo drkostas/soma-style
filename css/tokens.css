@@ -1,0 +1,20 @@
+/**
+ * soma-style — plain CSS custom properties for non-Tailwind consumers.
+ *
+ * Import once at the app root:  @import "soma-style/tokens.css";
+ * Then reference e.g. `color: var(--macro-protein);`.
+ * The values match `MACRO_COLORS` and the Tailwind theme exactly.
+ */
+:root {
+  /* Macro palette */
+  --macro-calories: #77c8d1;
+  --macro-protein: #b17850;
+  --macro-carbs: #6366b0;
+  --macro-fat: #cbe896;
+  --macro-fiber: #82d0c8;
+
+  /* Status colors */
+  --status-success: oklch(62% 0.17 142);
+  --status-warning: oklch(80% 0.18 87);
+  --status-danger: oklch(60% 0.22 25);
+}
