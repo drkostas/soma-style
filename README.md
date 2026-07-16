@@ -41,14 +41,15 @@ deficitColor(450, 500);      // "text-warning"
 
 ### Tailwind v4 apps
 
-Import the theme after Tailwind so the macro/status classes resolve:
+Import the theme after Tailwind. `base.css` is the whole app theme (surface + brand + chart tokens, dark/light, teal primary); `theme.css` adds the macro + status colors:
 
 ```css
 @import "tailwindcss";
+@import "soma-style/base.css";
 @import "soma-style/theme.css";
 ```
 
-Now `bg-warm`, `text-indigo`, `bg-teal`, `text-success`, etc. map to the design-spec colors. If you reference the classes indirectly (via `MACRO_COLORS`), add a `@source` so Tailwind still generates them:
+Now the shadcn-style tokens (`bg-background`, `bg-card`, `text-primary`, `bg-chart-1`, …) and the macro classes (`bg-warm`, `text-indigo`, `bg-teal`, `text-success`, …) all resolve to the ecosystem palette. If you reference the classes indirectly (via `MACRO_COLORS`), add a `@source` so Tailwind still generates them:
 
 ```css
 @source "../node_modules/soma-style/dist";
