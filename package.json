@@ -1,38 +1,39 @@
 {
   "name": "soma-style",
-  "version": "0.5.0",
-  "description": "Shared design tokens for the soma ecosystem — macro colors, chart palette, and a Tailwind v4 theme, reused across soma and the standalone macro-engine / hevy2garmin / garmin-auth UIs.",
+  "version": "1.0.0",
+  "description": "The soma ecosystem's universal design system — tokens (NativeWind/Tailwind preset) + React Native components (Text, Button, Card, Pill, Badge, Input, Bar, Ring, Modal, SegmentedControl, NavBar) that render on web and native. Modeled on macro-engine.",
   "license": "MIT",
   "author": "drkostas",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/drkostas/soma-style.git"
   },
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "main": "./src/ui/index.ts",
+  "source": "./src/ui/index.ts",
+  "react-native": "./src/ui/index.ts",
+  "types": "./src/ui/index.ts",
   "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "default": "./dist/index.js"
-    },
+    ".": "./src/ui/index.ts",
+    "./preset": "./preset.js",
     "./base.css": "./css/base.css",
     "./components.css": "./css/components.css",
     "./shadcn-compat.css": "./css/shadcn-compat.css",
     "./theme.css": "./css/theme.css",
-    "./tokens.css": "./css/tokens.css",
-    "./*": {
-      "types": "./dist/*.d.ts",
-      "default": "./dist/*.js"
-    }
+    "./tokens.css": "./css/tokens.css"
   },
   "files": [
-    "dist",
+    "src",
+    "preset.js",
     "css"
   ],
+  "peerDependencies": {
+    "nativewind": ">=4.0.0",
+    "react": "*",
+    "react-native": "*",
+    "react-native-svg": "*"
+  },
   "scripts": {
-    "build": "tsc -p tsconfig.json",
-    "test": "vitest run",
-    "prepublishOnly": "npm run build"
+    "test": "vitest run"
   },
   "devDependencies": {
     "typescript": "^5.6.0",
