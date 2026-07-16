@@ -68,3 +68,38 @@
 :root {
   color-scheme: dark;
 }
+
+/* Global element foundation — shared background, range inputs, scrollbars. */
+body {
+  background: var(--color-base);
+  color: var(--color-text);
+  font-feature-settings: "cv11", "ss01", "ss02";
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: var(--color-surface-elevated);
+  border-radius: 999px;
+  height: 6px;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--color-warm);
+  border: 2px solid var(--color-base);
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 999px;
+}

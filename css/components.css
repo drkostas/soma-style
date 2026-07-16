@@ -1,0 +1,97 @@
+/**
+ * soma-style component styles — reusable typography scale and surface treatments
+ * for the ecosystem. Import after base.css:
+ *   @import "soma-style/base.css";
+ *   @import "soma-style/components.css";
+ *
+ * Typography classes are prefixed `t-` to avoid clashing with Tailwind utilities.
+ * Surfaces: `.glass` / `.glass-elevated` / `.glass-subtle` are frosted panels;
+ * `.border-glow` is the raised card edge.
+ */
+
+/* === Typography scale ==================================================== */
+.t-display {
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  font-variant-numeric: tabular-nums;
+}
+@media (min-width: 768px) {
+  .t-display {
+    font-size: 4rem;
+  }
+}
+
+.t-headline {
+  font-size: 1.5rem;
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.t-title {
+  font-size: 1.125rem;
+  line-height: 1.25;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.t-body {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.t-caption {
+  font-size: 0.75rem;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.t-eyebrow {
+  font-size: 0.6875rem;
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.t-micro {
+  font-size: 0.625rem;
+  line-height: 1.2;
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+.tnum {
+  font-variant-numeric: tabular-nums;
+}
+
+/* === Surfaces =========================================================== */
+.glass {
+  background: rgba(14, 26, 38, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(35, 61, 72, 0.4);
+}
+
+.glass-elevated {
+  background: rgba(21, 34, 50, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(35, 61, 72, 0.5);
+}
+
+.glass-subtle {
+  background: rgba(14, 26, 38, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(26, 48, 64, 0.3);
+}
+
+.border-glow {
+  border: 1px solid var(--color-border-glow);
+  box-shadow: 0 0 20px rgba(35, 61, 72, 0.15), inset 0 1px 0 rgba(119, 200, 209, 0.05);
+}
