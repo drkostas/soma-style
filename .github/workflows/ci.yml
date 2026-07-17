@@ -1,0 +1,23 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    name: Unit Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - run: npm ci || npm install
+      # The RN/NativeWind UI components typecheck in the consumer apps (they
+      # supply the react-native + nativewind peer deps). Here we run the
+      # framework-agnostic unit tests (design tokens, macro colors).
+      - name: Unit tests
+        run: npm test
