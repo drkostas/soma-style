@@ -1,6 +1,6 @@
 {
   "name": "soma-style",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "The soma ecosystem's universal design system — tokens (NativeWind/Tailwind preset) + React Native components (Text, Button, Card, Pill, Badge, Input, Bar, Ring, Modal, SegmentedControl, NavBar) that render on web and native. Modeled on macro-engine.",
   "license": "MIT",
   "author": "drkostas",
@@ -19,7 +19,8 @@
     "./components.css": "./css/components.css",
     "./shadcn-compat.css": "./css/shadcn-compat.css",
     "./theme.css": "./css/theme.css",
-    "./tokens.css": "./css/tokens.css"
+    "./tokens.css": "./css/tokens.css",
+    "./colors": "./src/index.ts"
   },
   "files": [
     "src",
