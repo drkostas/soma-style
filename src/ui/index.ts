@@ -9,3 +9,4 @@ export { Ring, type RingProps } from "./Ring";
 export { Modal, type ModalProps } from "./Modal";
 export { SegmentedControl, type SegmentedControlProps } from "./SegmentedControl";
 export { NavBar, type NavItem, type NavBarProps } from "./NavBar";
+export { tabBarScreenOptions, CenterTabButton, type CenterTabButtonProps } from "./TabBar";
