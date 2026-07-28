@@ -27,7 +27,10 @@
   --color-accent-foreground: var(--color-text);
   --color-destructive: var(--color-danger);
 
-  --color-border: var(--color-border);
+  /* No --color-border mapping: shadcn and soma share the name, and base.css
+     already defines it (#1a3040). A `--color-border: var(--color-border)` line
+     here is self-referential (cyclic → invalid) and voids the token, making
+     every `border` fall back to currentColor. */
   --color-input: var(--color-border);
   --color-ring: var(--color-teal-dim);
 
