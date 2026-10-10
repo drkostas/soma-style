@@ -1,3 +1,5 @@
+![soma-style](assets/banner.png)
+
 # soma-style
 
 Shared design tokens for the soma ecosystem. One source of truth for macro colors, the chart palette, and the Tailwind v4 theme, so soma and the standalone macro-engine / hevy2garmin / garmin-auth UIs all render the same palette instead of each copy-pasting hex values.

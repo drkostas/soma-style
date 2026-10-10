@@ -1,0 +1,13 @@
+kind: banner
+name: soma-style
+line: Shared colours and styles that keep every soma app looking the same.
+accent: green
+diagram:
+- doc:
+    label: tokens
+    accent: true
+- arrow
+- panes:
+    rows: 2
+    cols: 3
+    label: apps
