@@ -31,7 +31,7 @@ Status colors (`success` / `warning` / `danger`) back the `progressColor` and `d
 ### TypeScript tokens
 
 ```ts
-import { MACRO_COLORS, progressColor, deficitColor, ChartColors } from "soma-style";
+import { MACRO_COLORS, progressColor, deficitColor, ChartColors } from "soma-style/colors";
 
 MACRO_COLORS.protein.hex;    // "#B17850"
 MACRO_COLORS.protein.bg;     // "bg-warm"          (Tailwind class, needs theme.css)
@@ -68,6 +68,10 @@ Import the plain CSS variables and reference them directly:
 ```css
 .protein { color: var(--macro-protein); }
 ```
+
+### React Native components
+
+The main entry (`soma-style`) is a small React Native UI kit (`Text`, `Button`, `Card`, `Pill`, `Ring`, `Sparkline` and others). It needs `react`, `react-native`, `react-native-svg` and `nativewind`. The last three are optional peer dependencies, so a web app that uses only the CSS files and `soma-style/colors` does not install React Native.
 
 ## Develop
 
